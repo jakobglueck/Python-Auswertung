@@ -20,10 +20,10 @@ if __name__ == '__main__':
     dfBestDifferential['FileSize in bytes'] = calculateInKilobytes(dfBestDifferential['FileSize in bytes'])
 
     dfBestAbsolute['Jsonform'] = 'absoluteJson'
-    dfBestAbsolute["Input"] = "Best"
+    dfBestAbsolute[""] = "Best"
 
     dfBestDifferential['Jsonform'] = 'differentialJson'
-    dfBestDifferential["Input"] = "Best"
+    dfBestDifferential[""] = "Best"
 
     df_Best= pd.concat([dfBestAbsolute,dfBestDifferential])
 
@@ -35,10 +35,10 @@ if __name__ == '__main__':
     dfNormalDifferential['FileSize in bytes'] = calculateInKilobytes(dfNormalDifferential['FileSize in bytes'])
 
     dfNormalAbsolute['Jsonform'] = 'absoluteJson'
-    dfNormalAbsolute["Input"] = "Normal"
+    dfNormalAbsolute[""] = "Normal"
 
     dfNormalDifferential['Jsonform'] = 'differentialJson'
-    dfNormalDifferential["Input"] = "Normal"
+    dfNormalDifferential[""] = "Normal"
 
     df_Normal= pd.concat([dfNormalAbsolute,dfNormalDifferential])
 
@@ -50,10 +50,10 @@ if __name__ == '__main__':
     dfWorstDifferential['FileSize in bytes'] = calculateInKilobytes(dfWorstDifferential['FileSize in bytes'])
 
     dfWorstAbsolute['Jsonform'] = 'absoluteJson'
-    dfWorstAbsolute["Input"] = "Worst"
+    dfWorstAbsolute[""] = "Worst"
 
     dfWorstDifferential['Jsonform'] = 'differentialJson'
-    dfWorstDifferential["Input"] = "Worst"
+    dfWorstDifferential[""] = "Worst"
 
     df_Worst= pd.concat([dfWorstAbsolute,dfWorstDifferential])
 
@@ -64,19 +64,19 @@ if __name__ == '__main__':
 
     dfBestPcore['FileSize in bytes'] = calculateInKilobytes(dfBestPcore['FileSize in bytes'])
 
-    dfBestPcore["Input"] = "Best"
+    dfBestPcore[""] = "Best"
 
     dfNormalPcore = pd.read_csv( '/Users/jakobglueck/Desktop/Foldersize/Zeitmessungen/normal/Corsano/ZeitMessungen/CorsanoSerialize.txt', delimiter=',',header=None, names=["JsonFile", "FileSize in bytes"], skiprows=1, dtype={"FileSize in bytes": int})
 
     dfNormalPcore['FileSize in bytes'] = calculateInKilobytes(dfNormalPcore['FileSize in bytes'])
 
-    dfNormalPcore["Input"] = "Normal"
+    dfNormalPcore[""] = "Normal"
 
     dfWorstPcore = pd.read_csv( '/Users/jakobglueck/Desktop/Foldersize/Zeitmessungen/Worstcase/Corsano/ZeitMessungen/CorsanoSerialize.txt', delimiter=',',header=None, names=["JsonFile", "FileSize in bytes"], skiprows=1, dtype={"FileSize in bytes": int})
 
     dfWorstPcore['FileSize in bytes'] = calculateInKilobytes(dfWorstPcore['FileSize in bytes'])
 
-    dfWorstPcore["Input"] = "Worst"
+    dfWorstPcore[""] = "Worst"
 
 
     df_allPcore = pd.concat([dfBestPcore,dfNormalPcore,dfWorstPcore])
