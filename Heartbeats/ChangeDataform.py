@@ -151,7 +151,6 @@ if __name__ == '__main__':
     dataNormalPcore1min = dfNormalPcore[maskNormalPcore1min]
     maskNormalPcore5min = dfNormalPcore['JsonFile'].str.contains('/5/')
     dataNormalPcore5min = dfNormalPcore[maskNormalPcore5min]
-    print(max(dataNormalPcore1min['FileSize in bytes']))
     dataNormalPcore1min['FileSize in bytes'] = calculateInKilobytes(dataNormalPcore1min['FileSize in bytes'])
     dataNormalPcore5min['FileSize in bytes'] = calculateInKilobytes(dataNormalPcore5min['FileSize in bytes'])
 
